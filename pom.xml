@@ -37,7 +37,9 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <archive>
-                        <manifestFile>${project.basedir}/src/META-INF/MANIFEST.MF</manifestFile>
+                        <manifest>
+                            <mainClass>com.stonewolf.game.GameLauncher</mainClass>
+                        </manifest>
                     </archive>
                     <outputDirectory>${project.basedir}/build</outputDirectory>
                 </configuration>
