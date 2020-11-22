@@ -213,19 +213,6 @@ public class Player extends Entity {
 
     @Override
     public void render(Graphics2D g) {
-
-//        g.setColor(Color.green);
-//        g.drawRect((int) (position.getWorldVar().x + bounds.getxOffset()),
-//                   (int) (position.getWorldVar().y + bounds.getyOffset()),
-//                   (int) bounds.getWidth(), (int) bounds.getHeight());
-
-//        if (attack) {
-//            g.setColor(Color.RED);
-//            g.drawRect((int) (hitBox.getPosition().getWorldVar().x + hitBox.getxOffset()),
-//                       (int) (hitBox.getPosition().getWorldVar().y + hitBox.getyOffset()),
-//                       (int) hitBox.getWidth(), (int) hitBox.getHeight());
-//        }
-
         g.drawImage(anim.getImage(), (int) (position.getWorldVar().x), (int) (position.getWorldVar().y), size, size, null);
 
         if (gettingHit) {
