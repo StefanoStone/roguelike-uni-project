@@ -5,22 +5,39 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.stonewolf.game</groupId>
-    <artifactId>artifactId</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>ZeldaRoguelikeGame</artifactId>
+    <version>1.0</version>
     <packaging>jar</packaging>
+
     <properties>
         <jdk.version>1.8</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+
+        <!-- Junit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.4.0</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
     <build>
         <sourceDirectory>${project.basedir}/src</sourceDirectory>
+        <testSourceDirectory>${project.basedir}/test</testSourceDirectory>
+
         <resources>
             <resource>
                 <directory>res</directory>
             </resource>
         </resources>
+
         <plugins>
+
+            <!-- Compile the source of the project -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -31,17 +48,28 @@
                 </configuration>
             </plugin>
 
+            <!-- Performs unit tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+            </plugin>
+
             <!-- Make this jar executable -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <archive>
-                        <manifestFile>${project.basedir}/src/META-INF/MANIFEST.MF</manifestFile>
+                        <manifest>
+                            <mainClass>com.stonewolf.game.GameLauncher</mainClass>
+                        </manifest>
                     </archive>
                     <outputDirectory>${project.basedir}/build</outputDirectory>
                 </configuration>
             </plugin>
+
         </plugins>
+
     </build>
 </project>

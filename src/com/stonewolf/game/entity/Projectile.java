@@ -47,11 +47,6 @@ public class Projectile extends Entity {
 
     @Override
     public void render(Graphics2D g) {
-//        g.setColor(Color.green);
-//        g.drawRect((int) (position.getWorldVar().x + bounds.getxOffset()),
-//                (int) (position.getWorldVar().y + bounds.getyOffset()),
-//                (int) bounds.getWidth(), (int) bounds.getHeight());
-
         g.drawImage(anim.getImage(), (int) (position.getWorldVar().x), (int) (position.getWorldVar().y), size, size, null);
     }
 
