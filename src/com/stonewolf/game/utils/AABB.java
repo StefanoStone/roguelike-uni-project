@@ -115,8 +115,6 @@ public class AABB {
         if (Math.sqrt(dX * dX + dY * dY) < aggro / 2) {
             return true;
         }
-
-
         return false;
     }
 
