@@ -46,6 +46,7 @@ jobs:
       with:
         name: spotbugs-report
         path: target/spotbugs.xml
+        if-no-files-found: ignore
         retention-days: 2
 
   jacoco:
