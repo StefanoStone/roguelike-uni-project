@@ -45,7 +45,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: spotbugs-report
-        path: ${{ project.build.directory }}/spotbugs.xml
+        path: target/spotbugs/spotbugs.xml
         retention-days: 2
 
   jacoco:
@@ -64,5 +64,5 @@ jobs:
           uses: actions/upload-artifact@v2
           with:
             name: jacoco-report
-            path: ${{ project.reporting.outputDirectory }}/jacoco/index.html
+            path: target/jacoco/index.html
             retention-days: 2

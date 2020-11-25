@@ -96,6 +96,7 @@
                 <version>4.1.4</version>
                 <configuration>
                     <xmlOutput>true</xmlOutput>
+                    <xmlOutputDirectory>target/spotbugs</xmlOutputDirectory>
                 </configuration>
             </plugin>
 
@@ -104,6 +105,9 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.6</version>
+                <configuration>
+                    <outputDirectory>target/jacoco</outputDirectory>
+                </configuration>
             </plugin>
         </plugins>
 
