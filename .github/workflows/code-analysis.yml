@@ -45,8 +45,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: spotbugs-report
-        path: target/spotbugs.xml
-        if-no-files-found: ignore
+        path: target/spotbugs.xmlOutput
         retention-days: 2
 
   jacoco:
