@@ -96,6 +96,7 @@
                 <version>4.1.4</version>
                 <configuration>
                     <xmlOutput>true</xmlOutput>
+                    <xmlOutputDirectory>target</xmlOutputDirectory>
                 </configuration>
             </plugin>
         </plugins>
