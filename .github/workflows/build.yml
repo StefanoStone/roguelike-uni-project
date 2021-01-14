@@ -36,4 +36,3 @@ jobs:
       with:
         name: jar-artifact
         path: build/ZeldaRoguelikeGame-1.0.jar
-        retention-days: 7
