@@ -25,7 +25,7 @@ public class Window extends JFrame {
 
     private void loadResources() {
         setTitle("2D ROGUELIKE GAME");
-        MusicPlayer.getInstance().playMusic("/music/DungeonBackgroundMusic.wav", Clip.LOOP_CONTINUOUSLY);
+        //MusicPlayer.getInstance().playMusic("/music/DungeonBackgroundMusic.wav", Clip.LOOP_CONTINUOUSLY);
         InputStream imgStream = this.getClass().getResourceAsStream("/util/JarIcon.png");
         try {
             BufferedImage myImg = ImageIO.read(imgStream);
